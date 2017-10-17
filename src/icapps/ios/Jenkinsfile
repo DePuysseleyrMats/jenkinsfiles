@@ -1,11 +1,8 @@
 package icapps.ios;
 
 def execute() {
- 
- 
  node('xcode'){
-                                 
-            wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
+  wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
              
                  checkout scm
                  echo 'beginnning workflow...'      
@@ -14,8 +11,7 @@ def execute() {
                  sh '''#!/bin/bash
                  fastlane beta
                  '''
-                }
-             
+  }
  }
 }
          
